@@ -91,7 +91,7 @@ def soma_divisao_conquista(matriz, l1, l2, c1,c2):
 
 
 # Função de execução do programa
-if __name__ == "__main__":
+def main():
     arquivo_matriz = ["\\GB - subretangulo maximo\\in_out\\in5"] # Caminho do arquivo de entrada
 
     # Loop para ler o arquivo e processar a matriz
@@ -104,3 +104,6 @@ if __name__ == "__main__":
 
             print("\nTempo de execução: {:.6f} segundos\n".format(fim - inicio)) # Imprime o tempo de execução
             print("Resultado do subretângulo de soma máxima:", resultado, "\n") # Imprime o resultado do subretângulo de soma máxima
+
+if __name__ == "__main__":
+    main()

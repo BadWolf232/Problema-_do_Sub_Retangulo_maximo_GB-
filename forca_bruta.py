@@ -51,14 +51,14 @@ def maximo_subretangulo(matriz):
 
 
 # Função de execução do programa
-if __name__ == "__main__":
+def main():
     arquivo_matriz = ["\\GB - subretangulo maximo\\in_out\\in5"]# Caminho do arquivo de entrada
-    
-    # Loop para ler o arquivo e processar a matriz
+        
+        # Loop para ler o arquivo e processar a matriz
     for nome in arquivo_matriz:
         matriz_lida = matriz_genarator(nome) # Variavel que irá ler a matriz do arquivo
-        
-        
+            
+            
         if matriz_lida is not None: # Verifica se a matriz foi lida corretamente
             resultado = maximo_subretangulo(matriz_lida)
             fim = time.time() # Fim do tempo de execução
@@ -66,3 +66,6 @@ if __name__ == "__main__":
             print("\nTempo de execução: {:.6f} segundos\n".format(fim - inicio)) # Imprime o tempo de execução  
             print("Resultado do subretângulo de soma máxima:", resultado, "\n")  # Imprime o resultado do subretângulo de soma máxima
             
+
+if __name__ == "__main__":
+    main()

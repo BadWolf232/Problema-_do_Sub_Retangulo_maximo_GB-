@@ -18,7 +18,6 @@ def matriz_genarator():
 
 # Função para encontrar o subretângulo de soma máxima usando força bruta
 def maximo_subretangulo(p):
-    p = matriz # Recebe a matriz gerada
     m = p.shape[0] # Obtém o tamanho da matriz
     
     max_soma = float('-inf') # Infinito negativo para garantir que qualquer soma será maior
@@ -37,12 +36,13 @@ def maximo_subretangulo(p):
     return max_soma
 
 # Função de execução do programa
-
-if __name__ == "__main__":
+def main():
     matriz = matriz_genarator()
-    reultado = maximo_subretangulo(matriz)
+    resultado = maximo_subretangulo(matriz)
     fim = time.time()
     print("Tempo de execução: {:.6f} segundos".format(fim - inicio)) 
+    print("Resultado do subretângulo de soma máxima:", resultado)
 
-    print("Resultado do subretângulo de soma máxima:", reultado)
+if __name__ == "__main__":
+    main()
 
