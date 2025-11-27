@@ -22,7 +22,7 @@ def matriz_genarator(arquivo_dado):
         
         matriz = np.array(dados, dtype=np.int32).reshape(n,n)# Formatação da matriz
         print(f"Matriz lida do arquivo ({n}x{n}):") 
-        print("\n",matriz, "\n")
+        #print("\n",matriz, "\n")
         return matriz # Retornar a matriz lida
         
     except FileNotFoundError:
@@ -102,5 +102,5 @@ if __name__ == "__main__":
             resultado = soma_divisao_conquista(matriz_lida, 0, matriz_lida.shape[0]-1, 0, matriz_lida.shape[1]-1) # Chama a função de divisão e conquista
             fim = time.time() # Fim do tempo de execução
 
-            print("Tempo de execução: {:.6f} segundos".format(fim - inicio)) # Imprime o tempo de execução
-            print("Resultado do subretângulo de soma máxima:", resultado) # Imprime o resultado do subretângulo de soma máxima
+            print("\nTempo de execução: {:.6f} segundos\n".format(fim - inicio)) # Imprime o tempo de execução
+            print("Resultado do subretângulo de soma máxima:", resultado, "\n") # Imprime o resultado do subretângulo de soma máxima

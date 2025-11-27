@@ -22,7 +22,7 @@ def matriz_genarator(arquivo_dado):
         
         matriz = np.array(dados, dtype=np.int32).reshape(n,n) # Formatação da matriz
         print(f"Matriz lida do arquivo ({n}x{n}):")
-        print("\n",matriz, "\n")
+        #print("\n",matriz, "\n")
         return matriz # Retornar a matriz lida
         
     except FileNotFoundError:
@@ -52,7 +52,7 @@ def maximo_subretangulo(matriz):
 
 # Função de execução do programa
 if __name__ == "__main__":
-    arquivo_matriz = ["\\GB - subretangulo maximo\\in_out\\in1"]# Caminho do arquivo de entrada
+    arquivo_matriz = ["\\GB - subretangulo maximo\\in_out\\in5"]# Caminho do arquivo de entrada
     
     # Loop para ler o arquivo e processar a matriz
     for nome in arquivo_matriz:
@@ -63,6 +63,6 @@ if __name__ == "__main__":
             resultado = maximo_subretangulo(matriz_lida)
             fim = time.time() # Fim do tempo de execução
             
-            print("Tempo de execução: {:.6f} segundos".format(fim - inicio)) # Imprime o tempo de execução  
-            print("Resultado do subretângulo de soma máxima:", resultado)  # Imprime o resultado do subretângulo de soma máxima
+            print("\nTempo de execução: {:.6f} segundos\n".format(fim - inicio)) # Imprime o tempo de execução  
+            print("Resultado do subretângulo de soma máxima:", resultado, "\n")  # Imprime o resultado do subretângulo de soma máxima
             
